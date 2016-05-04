@@ -1,12 +1,13 @@
 import React, { PropTypes } from 'react';
 import { Link, IndexLink } from 'react-router';
+import Copyright from './Copyright';
+import authHelper from '../businessLogic/authHelper';
 
 const App = (props) => {
   return (
     <div>
-      <IndexLink to="/">Home</IndexLink> | <Link to="/About">About</Link>
-      <br/>
       {props.children}
+      <Copyright />
     </div>
   );
 };

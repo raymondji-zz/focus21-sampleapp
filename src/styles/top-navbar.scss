@@ -1,0 +1,22 @@
+/* Variables */
+$app-link-tile-bg:#fff;
+$input-field-border: #00479f;
+$input-field-color: #000;
+
+/* Styles */
+.top-navbar {
+    height: 80px;
+    width: 100%;
+    
+    &_row {
+        list-style-type: none;
+        float: right;
+        margin-right: 8px;
+        
+        &_item {
+            display: inline-block;  
+            vertical-align: middle; 
+            margin-right: 10px;
+        }
+    }
+}

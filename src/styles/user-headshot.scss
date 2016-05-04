@@ -1,0 +1,19 @@
+.user-headshot {
+    text-align: center;
+    
+    &_img {           
+        margin: 0 auto;
+        display: block;  
+    }
+    
+    &_name {
+        margin-bottom: 0;
+        font-weight: 900;
+        font-size: 20px;
+    }
+    
+    &_email {
+        font-weight: 300;
+        margin: 0 0 20px;
+    }
+}

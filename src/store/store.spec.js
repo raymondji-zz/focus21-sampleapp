@@ -3,7 +3,6 @@ import { createStore } from 'redux';
 import { expect } from 'chai';
 import rootReducer from '../reducers';
 import calculator from '../businessLogic/fuelSavingsCalculator';
-import dateHelper from '../businessLogic/dateHelper';
 import initialState from '../reducers/initialState';
 
 describe('Store', function() {
@@ -29,7 +28,7 @@ describe('Store', function() {
       milesDriven: 100,
       milesDrivenTimeframe: 'month',
       displayResults: false,
-      dateModified: dateHelper.getFormattedDateTime(new Date()),
+      dateModified: "",
       necessaryDataIsProvidedToCalculateSavings: true,
       savings: calculator().calculateSavings(store.getState().fuelSavingsAppState)
     };
@@ -61,7 +60,7 @@ describe('Store', function() {
       milesDriven: 100,
       milesDrivenTimeframe: 'month',
       displayResults: false,
-      dateModified: dateHelper.getFormattedDateTime(new Date()),
+      dateModified: "",
       necessaryDataIsProvidedToCalculateSavings: false,
       savings: { annual: 0, monthly: 0, threeYear: 0 }
     };
@@ -114,7 +113,7 @@ describe('Store', function() {
       milesDriven: 100,
       milesDrivenTimeframe: 'year',
       displayResults: false,
-      dateModified: dateHelper.getFormattedDateTime(new Date()),
+      dateModified: "",
       necessaryDataIsProvidedToCalculateSavings: false,
       savings: lastGoodSavings
     };

@@ -1,0 +1,19 @@
+.copyright-footer {
+    position: fixed;
+    bottom: 0;    
+    width: 100%;
+    background: #fff;
+    box-shadow: 1px 0px 22px 10px #fff;
+    
+    &_text {
+        text-align: center;
+        font-weight: 300;
+        font-size: 14px;
+    }
+    
+    &_symbol {
+        font-size: 22px;
+        vertical-align: middle;
+        margin-right: 4px;
+    }
+}

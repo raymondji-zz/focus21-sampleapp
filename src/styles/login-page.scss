@@ -1,0 +1,111 @@
+/* Variables */
+$app-link-tile-bg:#fff;
+$input-field-border: #00479f;
+$input-field-color: #000;
+
+/* Styles */
+.login-container {
+    max-width: 300px;
+    margin: 0 auto;
+    position: relative;
+    height: 90vh;
+}
+
+.login-title-img {
+    margin: 30px auto 0;
+    display: block;
+}
+
+.login-input-container {
+    display: block;
+    box-sizing: border-box;
+    border: 1px solid $input-field-border;
+    border-radius: 100px;
+    padding: 18px;
+    margin-bottom: 20px;
+    width: 100%;
+    outline: 0;
+    position: relative;
+    
+    &:focus {
+        box-shadow: 0 0 10px -1px $input-field-border;
+    }
+    
+    &--error {
+        animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+        transform: translate3d(0, 0, 0);
+        backface-visibility: hidden;
+        perspective: 1000px;
+    }
+    
+    &_icon {
+        display:inline-block;
+        vertical-align: middle;
+        margin-right: 12px;
+    }
+    
+    &_field {
+        border: 0;
+        outline: 0;
+    }
+}
+
+.login-apps-thumbnail {
+     width: 100%;   
+     position: absolute;
+     bottom: 40px;
+}
+
+.login-form {
+    width: 100%;
+    position: absolute;
+    bottom: 14vh;
+    
+    &_submit {
+        @extend .login-input-container;
+        background: #00479f;
+        color: #fff;
+        font-weight: 700;
+        margin: 24px 0 10px;
+        text-transform: uppercase;
+        font-size: 18px;
+        padding: 16px;
+    }
+    
+    &_help {
+        color: $input-field-border;
+        font-size: 12px;
+        text-align: center;
+        text-decoration: none;
+        
+        &:link, &:visited, &:active, &:hover {
+            text-decoration: none;
+        }   
+    }
+    
+    &_error-message {
+        color: red;
+        text-align: center;
+        margin-bottom: 12px;
+        font-size: 16px;
+        font-weight: 100;
+    }
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
