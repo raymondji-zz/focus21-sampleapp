@@ -4,7 +4,7 @@ import Copyright from './Copyright';
 
 const App = (props) => {
   return (
-    <div>
+    <div className="wrapper">
       {props.children}
       <Copyright />
     </div>

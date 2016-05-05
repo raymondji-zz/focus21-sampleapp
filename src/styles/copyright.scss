@@ -1,7 +1,5 @@
 /* Styles */
 .copyright-footer {
-    position: fixed;
-    bottom: 0;    
     width: 100%;
     background: #fff;
     box-shadow: 1px 0px 22px 10px #fff;
@@ -10,6 +8,7 @@
         text-align: center;
         font-weight: 300;
         font-size: 14px;
+        margin: 20px 0 12px;
     }
     
     &_symbol {

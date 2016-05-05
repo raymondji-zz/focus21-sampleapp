@@ -8,12 +8,19 @@ $input-field-color: #000;
     max-width: 300px;
     margin: 0 auto;
     position: relative;
-    height: 90vh;
+    
+    @media (min-height: 768px) {
+        height: 90vh;
+    }
 }
 
 .login-title-img {
-    margin: 30px auto 0;
+    margin: 24px auto;
     display: block;
+    
+    @media (min-width: 300px) {
+        margin-bottom: 42px;
+    }
 }
 
 .login-input-container {
@@ -23,10 +30,14 @@ $input-field-color: #000;
     border-radius: 100px;
     padding: 18px;
     height: 62px;
-    margin-bottom: 20px;
-    width: 100%;
+    margin: 0 auto 20px;
+    width: 80%;
     outline: 0;
     position: relative;
+    
+    @media (min-width: 360px) {
+        width: 100%;
+    }
     
     &:focus {
         box-shadow: 0 0 10px -1px $input-field-border;
@@ -66,26 +77,34 @@ $input-field-color: #000;
     &_field {
         border: 0;
         outline: 0;
+        background:none;
+        width: calc(100% - 36px);
     }
 }
 
 .login-apps-thumbnail {
+    margin-top: 40px;
      width: 100%;   
-     position: absolute;
-     bottom: 40px;
+    @media (min-height: 768px) {
+        position: absolute;
+        bottom: 10px; 
+    }
 }
 
 .login-form {
     width: 100%;
-    position: absolute;
-    bottom: 14vh;
+    
+    @media (min-height: 768px) {
+        position: absolute;
+        bottom: 12vh; 
+    }
     
     &_submit {
         @extend .login-input-container;
         background: #00479f;
         color: #fff;
         font-weight: 700;
-        margin: 24px 0 10px;
+        margin: 24px auto 10px;
         text-transform: uppercase;
         font-size: 18px;
         padding: 16px;
