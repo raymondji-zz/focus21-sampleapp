@@ -18,10 +18,10 @@ const LoginFormInput = ({
   };
   
   const baseContainerClassName = "login-input-container";
-  
+  console.log("in progress: ", inProgress);
   let placeholder = name.toUpperCase();
-  let containerClassName = baseContainerClassName + (!!error ? " login-input-container--error" : "");
-  
+  let containerClassName = baseContainerClassName + (!!error ? ` ${baseContainerClassName}--error` : '');
+  containerClassName += (inProgress ? ` ${baseContainerClassName}--in-progress` : '');
   let iconSrc=`../assets/images/${name}.png`;
   
   return (
@@ -41,7 +41,7 @@ const LoginFormInput = ({
 LoginFormInput.propTypes = {
 	name: PropTypes.string.isRequired,
   inputType: PropTypes.string.isRequired,
-  value: PropTypes.string.isRequired,
+  value: PropTypes.string,
 	onChange: PropTypes.func.isRequired,
   onBlur: PropTypes.func,
 	placeholder: PropTypes.string,

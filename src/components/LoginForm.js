@@ -27,10 +27,10 @@ const LoginForm = ({
                 { !loginState.errorMessage || <p className="login-form_error-message">{loginState.errorMessage}</p> }            
                 { !!loginState.verifiedEmail || 
                   <LoginFormInput onChange={emailKeypress} onBlur={verifyEmail}
-                                  inputType="email" name="email" error={loginState.errorMessage} /> }
-    
+                                  inputType="email" name="email" error={loginState.errorMessage}
+                                  inProgress={loginState.emailVerificationInProgress} /> }
                 <LoginFormInput onChange={passwordKeypress} inputType="password"
-                            name="password" error={loginState.errorMessage} />
+                            name="password" error={loginState.errorMessage} inProgress={loginState.loginInProgress} />
                 <button className="login-form_submit" type="submit" value="Login">{ !loginState.verifiedEmail ? "Next" : "Sign In" }</button>
                 <Link className="login-form_help" to="/help"><p>Need help?</p></Link>      
             </form>

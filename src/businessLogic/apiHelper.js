@@ -44,7 +44,7 @@ export default class ApiHelper {
         if (email === pretendEmail) {
             return ApiHelper.createPromiseThatResolvesTo({
                 name: "Jeffery Aramini",
-                email: pretendEmail,
+                email: "jeff_aramini@ihealthsolutions.net",
                 photoUrl: "../assets/images/jeff-copy@3x.png"   
             });
         } else {
