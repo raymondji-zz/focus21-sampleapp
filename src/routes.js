@@ -9,7 +9,7 @@ import LoginPage from './containers/LoginPage.js';
 import AuthHelper from './businessLogic/authHelper.js';
 
 export default (
-  <Route path="/" component={App}>
+  <Route path="/focus21-sampleapp/" component={App}>
     <IndexRoute component={AppsPage} onEnter={AuthHelper.requireAuth} />
     <Route path="login" component={LoginPage} />
     <Route path="*" component={NotFoundPage} />
