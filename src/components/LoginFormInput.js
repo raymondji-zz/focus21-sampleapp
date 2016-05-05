@@ -18,9 +18,8 @@ const LoginFormInput = ({
   };
   
   const baseContainerClassName = "login-input-container";
-  console.log("in progress: ", inProgress);
   let placeholder = name.toUpperCase();
-  let containerClassName = baseContainerClassName + (!!error ? ` ${baseContainerClassName}--error` : '');
+  let containerClassName = baseContainerClassName + (error ? ` ${baseContainerClassName}--error` : '');
   containerClassName += (inProgress ? ` ${baseContainerClassName}--in-progress` : '');
   let iconSrc=`../assets/images/${name}.png`;
   
@@ -29,7 +28,7 @@ const LoginFormInput = ({
       <img className="login-input-container_icon" src={iconSrc}/>
       <input
         className="login-input-container_field"
-        novalidate
+        noValidate
         type={inputType}
         placeholder={placeholder}
         onChange={handleChange}

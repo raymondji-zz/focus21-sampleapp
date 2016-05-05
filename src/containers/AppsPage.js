@@ -13,7 +13,7 @@ export class AppsPage extends Component {
         apiHelper.getUserApps().then((appData) => {
              this.props.actions.appsListReceived(appData);
         });
-    };
+    }
     
     render() {
         const { appsList } = this.props.appState;
@@ -24,7 +24,7 @@ export class AppsPage extends Component {
                     <img className="app-links-logo" src="../assets/images/washington-department-of-health-2151214158-std@2x.png"/>
                     <ul className="app-links-grid">
                         {appsList.map(function(appLinkData){
-                            return <AppLink appLinkData={appLinkData} key={appLinkData.appId}></AppLink>
+                            return <AppLink appLinkData={appLinkData} key={appLinkData.appId} />;
                         })}
                     </ul>
                 </div>

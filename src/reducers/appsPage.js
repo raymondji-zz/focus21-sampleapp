@@ -3,7 +3,7 @@ import objectAssign from 'object-assign';
 
 const initialState = {
     appsList: []
-}
+};
 
 export default function appsPageState(state = initialState, action) {
     switch (action.type) {
@@ -13,6 +13,6 @@ export default function appsPageState(state = initialState, action) {
             });
         
         default:
-            return state
+            return state;
     }
-};
+}

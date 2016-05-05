@@ -22,7 +22,7 @@ export default class AuthHelper {
     static verifyEmail(dispatch, email) {
         dispatch(loginActions.emailVerificationStarted());        
         ApiHelper.verifyEmail(email).then(function(response) {
-            dispatch(loginActions.emailVerified(response))            
+            dispatch(loginActions.emailVerified(response));       
         }, function(error) {
             dispatch(loginActions.emailFailed());
         });
@@ -40,7 +40,7 @@ export default class AuthHelper {
             "name": "Jeffery Aramini",
             "scope": "self groups/admins",
             "exp": "1300819380"
-        }
+        };
     }
 
     static redirectIfLoggedIn() {
@@ -54,7 +54,7 @@ export default class AuthHelper {
             replace({
                 pathname: '/login',
                 state: { nextPathname: nextState.location.pathname }
-            })
+            });
         }
     }
-};
+}

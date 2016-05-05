@@ -16,35 +16,35 @@ const initialLoginFormState = {
     verifiedEmail: "",
     name: "",
     photoUrl: ""
-}
+};
 
 export default function loginFormState(state = initialLoginFormState, action) {
     switch (action.type) {
         case USER_LOGGED_IN:
             return objectAssign({}, state, initialLoginFormState, {
                 loginInProgress: false
-            })
+            });
         
         case USER_LOGGED_OUT:
-            return objectAssign({}, state, initialLoginFormState)
+            return objectAssign({}, state, initialLoginFormState);
             
         case LOGIN_STARTED:
             return objectAssign({}, state, {
                 errorMessage: "",
                 loginInProgress: true
-            })
+            });
             
         case LOGIN_FAILED:
             return objectAssign({}, state, {
                 errorMessage: "Password was incorrect.",
                 loginInProgress: false
-            })
+            });
             
        case EMAIL_VERIFICATION_STARTED:
             return objectAssign({}, state, {
                 errorMessage: "",
                 emailVerificationInProgress: true
-            })
+            });
             
         case EMAIL_VERIFIED:         
             return objectAssign({}, state, { 
@@ -59,7 +59,7 @@ export default function loginFormState(state = initialLoginFormState, action) {
             return objectAssign({}, state, {
                 errorMessage: "Email did not match any account.",
                 emailVerificationInProgress: false
-            })
+            });
             
         case EMAIL_KEYPRESS:
             return objectAssign({}, state, {
@@ -76,6 +76,6 @@ export default function loginFormState(state = initialLoginFormState, action) {
             });
             
         default:
-            return state
+            return state;
     }
 }

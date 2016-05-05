@@ -1,4 +1,4 @@
-const pretendEmail = "j"; //jeff_aramini@ihealthsolutions.net";
+const pretendEmail = "jeff_aramini@ihealthsolutions.net";
 
 export default class ApiHelper {
     
@@ -65,7 +65,7 @@ export default class ApiHelper {
             { name: "ImmuCast", photoUrl: "../assets/images/page-1.png", appId: "9" }
         ]);
     }
-};
+}
 
 const API_URL = 'localhost:8080/api/';
 ApiHelper.setApiUrl(API_URL);

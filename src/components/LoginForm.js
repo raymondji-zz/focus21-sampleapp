@@ -16,7 +16,7 @@ const LoginForm = ({
         } else {
             submitLogin(loginState.emailInput, loginState.passwordInput);
         }
-    }
+    };
         
     return (
         <div className="login-container">

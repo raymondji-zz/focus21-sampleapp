@@ -1,17 +1,16 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import * as authActions from '../actions/authActions'
+import * as authActions from '../actions/authActions';
 import * as loginActions from '../actions/loginActions';
 import LoginForm from '../components/LoginForm';
-import Copyright from '../components/Copyright'
-import authHelper from '../businessLogic/authHelper.js'
+import Copyright from '../components/Copyright';
+import authHelper from '../businessLogic/authHelper.js';
 import objectAssign from 'object-assign';
 
 export class LoginPage extends Component {
 
   render() {
-    console.log("loginpage props:", this.props);
     return (
       <div>
         <LoginForm
@@ -27,7 +26,8 @@ export class LoginPage extends Component {
 }
 
 LoginPage.propTypes = {
-  actions: PropTypes.object.isRequired,
+  loginState: PropTypes.object.isRequired,
+  actions: PropTypes.object.isRequired
 };
 
 function mapStateToProps(state) {

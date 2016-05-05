@@ -4,16 +4,16 @@ import { Link } from 'react-router';
 const AppLink = ( props ) => {
   const { name, photoUrl, appId } = props.appLinkData;
   const appUrl = `/apps/${appId}`;
-  var appLinkTileStyle = {
+  let appLinkTileStyle = {
     backgroundImage: 'url(' + photoUrl + ')',
     backgroundRepeat: 'no-repeat',
     backgroundSize: '50%',
     backgroundPosition: 'center'
-  }
+  };
   
   return (
     <Link to={appUrl}><li className="app-links-grid_tile" style={appLinkTileStyle}></li></Link>
-  )
+  );
 };
 
 AppLink.propTypes = {

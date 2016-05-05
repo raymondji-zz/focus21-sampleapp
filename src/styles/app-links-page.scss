@@ -41,7 +41,7 @@ $app-link-tile-bg:#fff;
         display: block;
       }
       
-      @media (min-width: 450px){
+      @media (min-width: 450px) {
         display: inline-block;
         width: calc(50% - 30px);
         padding-bottom: calc(50% - 30px);

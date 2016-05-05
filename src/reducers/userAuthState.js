@@ -7,19 +7,17 @@ const initialState = {
     name: "",
     photoUrl: "",
     jwt: "",
-    user: "",
+    user: ""
 };
 
 export default function userAuthState(state = initialState, action) {
-    switch (action.type) {    
-        case USER_LOGGED_IN:
-            let decodedJwt = authHelper.decodeJWT(action.jwt);
-            
+    switch (action.type) { 
+        case USER_LOGGED_IN:            
             return objectAssign({}, state, { 
-                jwt: action.jwt,
+                jwt: action.jwt
             });
         
         default:
-            return state
+            return state;
     }
-};
+}

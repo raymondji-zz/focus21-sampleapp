@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
-import loginAppState from './login.js';
-import appsPageState from './appsPage.js';
-import userAuthState from './login'
+import loginAppState from './login';
+import appsPageState from './appsPage';
+import userAuthState from './userAuthState';
 
 const rootReducer = combineReducers({
   appsPageState,

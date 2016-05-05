@@ -1,7 +1,6 @@
 import React, { PropTypes } from 'react';
 import { Link, IndexLink } from 'react-router';
 import Copyright from './Copyright';
-import authHelper from '../businessLogic/authHelper';
 
 const App = (props) => {
   return (

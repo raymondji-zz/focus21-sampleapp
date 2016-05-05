@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { expect } from 'chai';
 import sinon from 'sinon';
-import Copyright from './AppLink';
+import Copyright from './Copyright';
 import { Link } from 'react-router';
 
 describe('<AppLink />', () => {
@@ -14,7 +14,7 @@ describe('<AppLink />', () => {
     expect(actual).to.equal(expected);
   });
 
-   it('should have a span with className copyright-footer_symbol', () => {
+  it('should have a span with className copyright-footer_symbol', () => {
     const wrapper = shallow(<Copyright />);
     const actual = wrapper.find('span').prop('className');
     const expected = 'copyright-footer_symbol';

@@ -2,7 +2,6 @@ import React from 'react';
 import { Route, IndexRoute } from 'react-router';
 
 import App from './components/App';
-import FuelSavingsPage from './containers/FuelSavingsPage';
 import NotFoundPage from './components/NotFoundPage.js';
 import AppsPage from './containers/AppsPage.js';
 import LoginPage from './containers/LoginPage.js';
