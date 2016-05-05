@@ -1,12 +1,13 @@
-Test account info
-Username: jeff_aramini@ihealthsolutions.net
-Password: password
+# Testing the app 
+URL: https://raymondji.github.io/
+Test account info:
+| Username - jeff_aramini@ihealthsolutions.net
+| Password -  password
 
 Note that github pages' own routing seems to interfere with react router, so to re-access
 the login page delete the jwtToken localStorage key and reload the root url.
 
-# Based off of...
-# React Slingshot!
+# Based off of... React Slingshot!
 
 React Slingshot is a comprehensive starter kit for rapid application development using React. It offers a rich development experience including:
 
