@@ -23,7 +23,7 @@ describe('<LoginFormInput />', () => {
     const actual = wrapper.find('input').length;
     const expected = 1;
 
-    actual.should.be.equal.to(expected);
+    actual.should.equal(expected);
   });
 
   it('should handle change', () => {
@@ -37,7 +37,7 @@ describe('<LoginFormInput />', () => {
     const wrapper = shallow(<LoginFormInput {...props} />);
 
     props.onChange.should.not.have.been.called;
-    wrapper.simulate('change', { target: { value: 'bye' }});
+    wrapper.find("input").simulate('change', { target: { value: 'bye' }});
     props.onChange.should.have.been.calledWith('bye');
   });
 });

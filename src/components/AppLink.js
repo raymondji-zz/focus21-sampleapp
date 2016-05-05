@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router';
 
 const AppLink = ( props ) => {
-  const { name, photoUrl, appId } = props.appLinkData;
+  const { photoUrl, appId } = props.appLinkData;
   const appUrl = `/apps/${appId}`;
   let appLinkTileStyle = {
     backgroundImage: 'url(' + photoUrl + ')',
@@ -18,7 +18,6 @@ const AppLink = ( props ) => {
 
 AppLink.propTypes = {
 	appLinkData: PropTypes.shape({
-      name: PropTypes.string.isRequired,
       photoUrl: PropTypes.string.isRequired,
       appId: PropTypes.string.isRequired
     })

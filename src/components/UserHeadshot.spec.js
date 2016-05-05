@@ -17,6 +17,6 @@ describe('<UserHeadshot />', () => {
     const actual = wrapper.find({ src: photoUrl }).length;
     const expected = 1;
 
-    actual.should.be.equal.to(expected);
+    actual.should.equal(expected);
   });
 });

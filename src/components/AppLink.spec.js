@@ -7,7 +7,11 @@ import { Link } from 'react-router';
 
 describe('<AppLink />', () => {
   it('should have a li with app-links-grid_tile className', () => {
-    const wrapper = shallow(<AppLink />);
+    const appLinkData = {
+      photoUrl: "",
+      appId: 1
+    }
+    const wrapper = shallow(<AppLink appLinkData={appLinkData} />);
     const actual = wrapper.find('li').prop('className');
     const expected = 'app-links-grid_tile';
     
@@ -16,7 +20,11 @@ describe('<AppLink />', () => {
 
    it('should link to the given app url', () => {
     const appId = 1;
-    const wrapper = shallow(<AppLink appId={appId} />);
+    const appLinkData = {
+      photoUrl: "",
+      appId: 1
+    }
+    const wrapper = shallow(<AppLink appLinkData={appLinkData} />);
     const actual = wrapper.findWhere(n => n.prop('to') == `/apps/${appId}`).length;
     const expected = 1;
     

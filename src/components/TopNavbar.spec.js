@@ -16,6 +16,6 @@ describe('<TopNavbar />', () => {
     const actual = wrapper.find('li').length;
     const expected = 4;
 
-    actual.should.be.equal.to(expected);
+    actual.should.equal(expected);
   });
 });

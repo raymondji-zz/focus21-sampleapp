@@ -11,6 +11,9 @@ process.env.NODE_ENV = 'production';
 
 // Disable webpack-specific features for tests since
 // Mocha doesn't know what to do with them.
+require.extensions['.scss'] = function () {
+  return null;
+};
 require.extensions['.css'] = function () {
   return null;
 };

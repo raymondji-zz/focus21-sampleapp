@@ -8,7 +8,7 @@ describe('ApiHelper', () => {
       let resolveValue = "hello world";
 
       //assert
-      ApiHelper.createPromiseThatResolveTo(resolveValue).then(function(response) {
+      ApiHelper.createPromiseThatResolvesTo(resolveValue).then(function(response) {
           response.should.equal(resolveValue);
       });
     });
@@ -20,7 +20,7 @@ describe('ApiHelper', () => {
       let rejectValue = "hello world";
 
       //assert
-      ApiHelper.createPromiseRejectsTo(rejectValue).reject(function(error) {
+      ApiHelper.createPromiseThatRejectsTo(rejectValue).catch(function(error) {
           error.should.equal(rejectValue);
       });
     });
