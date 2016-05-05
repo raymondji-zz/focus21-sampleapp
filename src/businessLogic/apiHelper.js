@@ -26,16 +26,16 @@ export default class ApiHelper {
         ApiHelper._apiUrl = url;
     }
     
-	static makeLoginRequest(email, password) {
+    static makeLoginRequest(email, password) {
        if (email === pretendEmail &&
            password === "password") {
-       	   return ApiHelper.createPromiseThatResolvesTo({
+           return ApiHelper.createPromiseThatResolvesTo({
                 id_token: "123456789.asdfg.qwerty"
             });
        } else {
            return ApiHelper.createPromiseThatRejectsTo({});
        }
-	}
+    }
     
     static makeLogoutRequest() {
     }
